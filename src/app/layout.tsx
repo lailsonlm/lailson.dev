@@ -37,9 +37,23 @@ const ibmPlex = localFont({
   variable: '--font-ibm',
 });
 
+const openGraphImage = { images: ['/imageOG.jpg'] }
+
 export const metadata = {
   title: 'Lailson Sobral',
   description: 'Desenvolvedor Fullstack, movido por desafios e soluções de problemas!',
+
+  openGraph: {
+    ...openGraphImage,
+    title: 'Lailson Sobral',
+    description: 'Desenvolvedor Fullstack, movido por desafios e soluções de problemas!',
+  },
+
+  twitter: {
+    ...openGraphImage,
+    title: 'Lailson Sobral',
+    description: 'Desenvolvedor Fullstack, movido por desafios e soluções de problemas!',
+  },
 }
 
 export default function RootLayout({
