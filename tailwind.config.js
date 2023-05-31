@@ -7,11 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-kanit)'],
+        light: ['var(--font-kanit2)'],
+        title: ['var(--font-ibm)'],
+      },
       colors: {
         gray: {
-          50: '#EEEEEE',
-          700: '#222831',
           900: '#1E2228',
+          700: '#222831',
+          500: '#2C323A',
+          300: '#69778C',
+          50: '#EEEEEE',
         },
         cyan: {
           500: '#00ADB5',
@@ -21,6 +28,9 @@ module.exports = {
       
       blur: {
         full: '194px',
+      },
+      backgroundImage: {
+        'gradient-primary': `linear-gradient(to bottom, #37F399 -5.76%, #00ADB5 104.66%)`,
       },
     },
   },

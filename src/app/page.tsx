@@ -1,55 +1,18 @@
-import Image from 'next/image'
-import logo from '../assets/logo.svg'
-import { Github, Linkedin, Instagram, Youtube } from 'lucide-react'
+import { MarqueeTechs } from '@/components/MarqueeTechs'
+import { SocialMedia } from '@/components/SocialMedia'
 
 export default function Home() {
   return (
-    <div className='flex flex-col w-full h-screen items-center justify-center pt-32 pb-20 sm:pb-10 px-8 sm:px-4 relative overflow-hidden'>
-      <div className='flex flex-col flex-1 items-center justify-center'>
-        <Image src={logo} alt='Logo Lailson.dev' className='w-60 sm:w-full max-w-[600px] z-10' />
-        <div className='flex flex-col items-center justify-center mt-8 sm:mt-12 gap-1 z-10'>
-          <p className='text-sm sm:text-2xl'>Página em construção, volte em breve!</p>
-          <h1 className='sm:text-2xl font-bold'>Obrigado pela visita 😎</h1>
+    <main className='flex w-full flex-col h-[calc(100vh-120px)] sm:h-[calc(100vh-64px)] justify-center relative'>
+      <div className='flex flex-col flex-1 justify-center w-full max-w-[1200px] mx-auto px-4'>
+        <h1 className='text-6xl sm:text-9xl lg:text-[200px] font-title max-w-xs sm:max-w-[720px] font-semibold leading-[3rem] sm:leading-[7rem] lg:leading-[10.37rem] tracking-[-0.1em] bg-gradient-primary bg-clip-text text-transparent'>Lailson Sobral</h1>
+        <div className='flex flex-col justify-center mt-8 sm:mt-16 sm:gap-2'>
+          <p className='text-2xl sm:text-4xl md:text-5xl font-title max-w-[720px] font-semibold leading-10 tracking-[-0.1em]'>Desenvolvedor Fullstack</p>
+          <h1 className='text-xs sm:text-base md:text-2xl text-gray-300'>Solucionando problemas através das linhas de código.</h1>
         </div>
+        <SocialMedia />
       </div>
-
-      <div className='flex gap-2'>
-        <a 
-          href="https://github.com/lailsonlm" 
-          target='_blank'
-          title='Github'
-          className='flex text-cyan-700 hover:text-cyan-500 transition-colors hover:bg-cyan-500/10 p-2 rounded-lg'
-        >
-          <Github className='w-6 h-6 sm:w-8 sm:h-8' />
-        </a>
-        <a 
-          href="https://www.linkedin.com/in/lailsonsobral/" 
-          target='_blank'
-          title='LinkedIn'
-          className='flex text-cyan-700 hover:text-cyan-500 transition-colors hover:bg-cyan-500/10 p-2 rounded-lg'
-        >
-          <Linkedin className='w-6 h-6 sm:w-8 sm:h-8' />
-        </a>
-        <a 
-          href="https://www.instagram.com/lailson.dev/" 
-          target='_blank'
-          title='Instagram'
-          className='flex text-cyan-700 hover:text-cyan-500 transition-colors hover:bg-cyan-500/10 p-2 rounded-lg'
-        >
-          <Instagram className='w-6 h-6 sm:w-8 sm:h-8' />
-        </a>
-        <a 
-          href="https://www.youtube.com/@lailsonsobral" 
-          target='_blank'
-          title='YouTube'
-          className='flex text-cyan-700 hover:text-cyan-500 transition-colors hover:bg-cyan-500/10 p-2 rounded-lg'
-        >
-          <Youtube className='w-6 h-6 sm:w-8 sm:h-8' />
-        </a>
-      </div>
-
-      <div className="absolute right-0 bottom-0 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-cyan-700 opacity-50 blur-full" />     
-      
-    </div>
+      <MarqueeTechs />
+    </main>      
   )
 }
