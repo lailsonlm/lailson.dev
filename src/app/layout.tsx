@@ -41,18 +41,18 @@ const openGraphImage = { images: ['/imageOG.jpg'] }
 
 export const metadata = {
   title: 'Lailson Sobral',
-  description: 'Desenvolvedor Fullstack, movido por desafios e soluções de problemas!',
+  description: 'Desenvolvedor Fullstack, solucionando problemas através das linhas de código.',
 
   openGraph: {
     ...openGraphImage,
     title: 'Lailson Sobral',
-    description: 'Desenvolvedor Fullstack, movido por desafios e soluções de problemas!',
+    description: 'Desenvolvedor Fullstack, solucionando problemas através das linhas de código.',
   },
 
   twitter: {
     ...openGraphImage,
     title: 'Lailson Sobral',
-    description: 'Desenvolvedor Fullstack, movido por desafios e soluções de problemas!',
+    description: 'Desenvolvedor Fullstack, solucionando problemas através das linhas de código.',
   },
 }
 
