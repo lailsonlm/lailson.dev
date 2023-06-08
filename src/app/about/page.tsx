@@ -1,16 +1,23 @@
+import { AnimationChildren, AnimationFadeChildren } from "../animation";
+
 export default function About() {
   return (
     <section className="flex flex-col h-[calc(100vh-90px)] sm:h-[calc(100vh-64px)] w-full items-center mt-2 sm:mt-12">
       <div className="flex justify-center w-full max-w-[1200px] items-center flex-col gap-2 px-4">
         <div className="flex items-center justify-center">
-          <h1 className='text-2xl sm:text-4xl md:text-5xl font-title tracking-tight bg-gradient-primary bg-clip-text text-transparent whitespace-nowrap'>Sobre Mim</h1>
+          <AnimationChildren>
+            <h1 className='text-2xl sm:text-4xl md:text-5xl font-title tracking-tight bg-gradient-primary bg-clip-text text-transparent whitespace-nowrap'>Sobre Mim</h1>
+          </AnimationChildren>
         </div>
         <div className="flex items-center justify-center w-full max-w-4xl">
-          <p className="font-light text-center text-xs sm:text-base">Desenvolvedor Full Stack, movido por desafios e solução de problemas. Formado em Administração de Empresas, cursando Graduação em Tecnologia em Análise e Desenvolvimento de Sistemas. Atualmente trabalho como freelancer com foco na construção de interfaces de alta performance utilizando as melhores stacks da atualizada. Também, produzo conteúdo para ajudar no crescimento da comunidade.</p>
+          <AnimationFadeChildren>
+            <p className="font-light text-center text-xs sm:text-base">Desenvolvedor Full Stack, movido por desafios e solução de problemas. Formado em Administração de Empresas, cursando Graduação em Tecnologia em Análise e Desenvolvimento de Sistemas. Atualmente trabalho como freelancer com foco na construção de interfaces de alta performance utilizando as melhores stacks da atualizada. Também, produzo conteúdo para ajudar no crescimento da comunidade.</p>
+          </AnimationFadeChildren>
         </div>
       </div>
 
       <div className="flex w-full justify-center overflow-y-scroll my-12 mb-12 px-4 z-20">
+      <AnimationFadeChildren>
         <div className="grid grid-cols-2 max-w-[1200px] h-full w-full">
           <div className="flex items-center justify-end px-4 sm:px-12 py-4 sm:py-8 border-r border-white/10">
             <p className="p-4 bg-white/10 border border-transparent rounded-md hover:border-cyan-500 transition-colors text-sm sm:text-base">Certified SAFe 5 Product Owner/Product Manager - Scaled Agile Framework (SAFe) – 2023.</p>
@@ -54,6 +61,7 @@ export default function About() {
             <p className="p-4 bg-white/10 border border-transparent rounded-md hover:border-cyan-500 transition-colors text-sm sm:text-base">Certified SAFe 4 Practitioner - Scaled Agile Framework (SAFe).</p>
           </div>
         </div>
+        </AnimationFadeChildren>
       </div>
     </section>
   )

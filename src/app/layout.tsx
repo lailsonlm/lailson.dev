@@ -3,6 +3,7 @@ import './globals.css'
 import { IBM_Plex_Mono, IBM_Plex_Sans, Kanit } from 'next/font/google'
 import localFont from 'next/font/local';
 import { MenuMobile } from '@/components/MenuMobile';
+import { Animation } from './animation';
 
 
 // const ibmPlex = IBM_Plex_Mono({ 
@@ -64,12 +65,14 @@ export default function RootLayout({
   return (
     <html lang="pt" className={`${ibmPlex.variable} ${kanit.variable} ${kanit2.variable} font-sans bg-gray-700 text-gray-50`}>
       <body>
+        <Animation>
         <div className='flex flex-col w-full h-screen items-center relative overflow-hidden'>
           <Header />
           {children}
           <MenuMobile />
         <div className="absolute right-0 bottom-0 w-96 h-48 sm:h-[288px] sm:w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-cyan-700 opacity-50 blur-full -z-20" />
         </div>
+        </Animation>
       </body>
     </html>
   )

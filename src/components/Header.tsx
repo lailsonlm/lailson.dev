@@ -2,6 +2,7 @@ import Image from 'next/image'
 import logo from '../assets/logo.svg'
 import { NavLink } from './NavLink';
 import { Home, FolderGit2, UserCircle } from 'lucide-react';
+import { AnimationFadeChildren } from '@/app/animation';
 
 export function Header() {
   const navLinks = [
@@ -24,7 +25,9 @@ export function Header() {
 
   return (
     <div className='flex justify-between w-full max-w-[1200px] py-4 px-4 mx-auto'>
-      <Image src={logo} alt='Logo Lailson.dev' className='h-8 w-fit' />
+      <AnimationFadeChildren>
+        <Image src={logo} alt='Logo Lailson.dev' className='h-8 w-fit' />
+      </AnimationFadeChildren>
 
       <nav className='items-center gap-4 hidden sm:flex'>
         <NavLink navLinks={navLinks} />
